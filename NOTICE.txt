@@ -1,0 +1,20 @@
+PixWeb and pixVLM Small — attribution status
+
+This repository currently contains PixLab project documentation. It does
+not include upstream model weights, adapters, exported graphs or vendor code.
+
+Research references:
+- LiquidAI/LFM2.5-VL-450M
+  https://huggingface.co/LiquidAI/LFM2.5-VL-450M
+- Liquid4All/onnx-export
+  https://github.com/Liquid4All/onnx-export
+
+These references describe candidates and tooling under evaluation; they
+do not establish that a PixLab model was trained or released.
+
+Before distributing artifacts, record the exact upstream revisions and
+include the required licenses, copyright notices, attribution and notices
+of changes. This file does not replace those component-specific notices.
+
+Model licensing status: MODEL_LICENSE.md
+Commercial enquiries: licensing@pixlab.io
