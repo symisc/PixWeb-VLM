@@ -1,6 +1,6 @@
-# PixWeb & pixVLM Small
+# PixWeb & PixVLM Small
 
-Two small vision language models from PixLab: **PixWeb** for web tasks and browser automation, and **pixVLM Small** for general-purpose vision.
+Two small vision language models from PixLab: **PixWeb** for web tasks and browser automation, and **PixVLM Small** for general-purpose vision.
 
 [Product page](https://pixlab.io/pix-web-small-vision-models) · [Hugging Face organization](https://huggingface.co/symiscsys) · [Commercial enquiries](mailto:licensing@pixlab.io)
 
@@ -11,11 +11,11 @@ Two small vision language models from PixLab: **PixWeb** for web tasks and brows
 | Model | Focus | Intended tasks |
 |---|---|---|
 | **PixWeb** | Web understanding | Read UI text, describe screenshots, identify visible controls and page states, and supply observations for browser automation |
-| **pixVLM Small** | General-purpose vision | OCR, common-object recognition, image questions, captions and selected fields as JSON |
+| **PixVLM Small** | General-purpose vision | OCR, common-object recognition, image questions, captions and selected fields as JSON |
 
 PixWeb supplies observations to a separate planner and browser controller. The integrating application chooses and executes actions, then checks the resulting page.
 
-pixVLM Small targets photographs, receipts, labels and simple forms. Fine-grained OCR needs its own accuracy testing; object recognition does not imply a released detector, segmentation model or tracker.
+PixVLM Small targets photographs, receipts, labels and simple forms. Fine-grained OCR needs its own accuracy testing; object recognition does not imply a released detector, segmentation model or tracker.
 
 ## Deployment targets
 
@@ -40,7 +40,7 @@ See the [roadmap](plan.md), [training approach](TRAINING.md) and [dataset policy
 
 ## Model releases
 
-The intended Hugging Face repositories are `symiscsys/pixweb` and `symiscsys/pixvlm-small`. They are publication targets, not current download links.
+The intended Hugging Face repositories are `symiscsys/pixweb` and `symiscsys/PixVLM-small`. They are publication targets, not current download links.
 
 GitHub will hold code and documentation. Hugging Face will hold model artifacts, model cards, processor files and validated exports. Model cards will link back to this repository and the PixLab product page.
 

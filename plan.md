@@ -1,4 +1,4 @@
-# PixWeb & pixVLM Small roadmap
+# PixWeb & PixVLM Small roadmap
 
 Status: documentation and baseline evaluation planning. No PixLab model weights or runtime are released yet.
 
@@ -9,7 +9,7 @@ Status: documentation and baseline evaluation planning. No PixLab model weights 
 | Model | Purpose | First evaluation tasks |
 |---|---|---|
 | PixWeb | Visual observations for web tasks and browser automation | Visible UI text, controls, form states, dialogs and changes after browser actions |
-| pixVLM Small | General-purpose vision under a 700M total-parameter ceiling | OCR, common-object recognition, captions, visual questions and selected fields as JSON |
+| PixVLM Small | General-purpose vision under a 700M total-parameter ceiling | OCR, common-object recognition, captions, visual questions and selected fields as JSON |
 
 A separate planner and browser controller choose and execute PixWeb's actions. Evaluate the observation model separately from the complete automation workflow.
 
@@ -18,7 +18,7 @@ Share training, evaluation and export tooling. Keep each model's checkpoint, pro
 ## 1. Establish the baselines
 
 - Evaluate the [Liquid native checkpoint](https://huggingface.co/LiquidAI/LFM2.5-VL-450M) as PixWeb's pretrained starting point, using public screenshot datasets.
-- Evaluate general pretrained candidates for pixVLM Small. Liquid is a candidate, not a settled choice: its model card cautions against fine-grained OCR.
+- Evaluate general pretrained candidates for PixVLM Small. Liquid is a candidate, not a settled choice: its model card cautions against fine-grained OCR.
 - Pin each candidate's revision and matching processor, tokenizer and chat template.
 - Build a small held-out set for each model from free public datasets before adapting either checkpoint.
 
@@ -43,7 +43,7 @@ The [official Liquid ONNX exporter](https://github.com/Liquid4All/onnx-export) i
 ## 4. Package a usable release
 
 - GitHub holds source, instructions and evaluation reports; Hugging Face holds model artifacts.
-- Intended model IDs are `symiscsys/pixweb` and `symiscsys/pixvlm-small`. These repositories are not established by this document.
+- Intended model IDs are `symiscsys/pixweb` and `symiscsys/PixVLM-small`. These repositories are not established by this document.
 - Include the matching processor, tokenizer, template, artifact checksums, license notices and actual evaluation results.
 - Document which precision profiles, browsers and devices were tested.
 - Add a small image/screenshot demo after inference works. Keep model inference distinct from browser-agent execution.

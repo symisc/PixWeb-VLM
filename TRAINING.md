@@ -6,9 +6,9 @@ Status: implementation plan. This repository does not yet contain a trainer or t
 
 **PixWeb:** evaluate the [Liquid native checkpoint](https://huggingface.co/LiquidAI/LFM2.5-VL-450M) as the pretrained starting point. Adapt it directly using free public screenshot datasets and evaluate on held-out sites and layouts.
 
-**pixVLM Small:** evaluate a general pretrained VLM against OCR, object recognition, captions, image questions and extraction. Keep the total merged model at or below 700M parameters. Do not assume a browser-specialist fine-tune is a suitable general-vision base.
+**PixVLM Small:** evaluate a general pretrained VLM against OCR, object recognition, captions, image questions and extraction. Keep the total merged model at or below 700M parameters. Do not assume a browser-specialist fine-tune is a suitable general-vision base.
 
-The Liquid candidate contains approximately 448.7M parameters. Its model card warns about fine-grained OCR, so evaluate general vision and text-reading quality before selecting pixVLM Small's base.
+The Liquid candidate contains approximately 448.7M parameters. Its model card warns about fine-grained OCR, so evaluate general vision and text-reading quality before selecting PixVLM Small's base.
 
 Use complete pretrained VLMs. Custom architecture construction, random projector alignment and compulsory teacher distillation are outside the first pilot.
 
@@ -55,7 +55,7 @@ These are initial pilot settings to validate, not measured training results. Use
 Compare the baseline and adapted model on unchanged held-out inputs.
 
 - **PixWeb:** UI text, fields, states, invented controls and observation completeness. Measure end-to-end automation separately with a fixed planner and browser controller.
-- **pixVLM Small:** OCR error rate, object/question accuracy, grounded captions, JSON validity and extracted-field accuracy.
+- **PixVLM Small:** OCR error rate, object/question accuracy, grounded captions, JSON validity and extracted-field accuracy.
 - **Export:** compare matching preprocessing, prefill and teacher-forced steps before comparing free-running answers.
 - **Quantization:** check per-task quality and real runtime behavior for each profile.
 

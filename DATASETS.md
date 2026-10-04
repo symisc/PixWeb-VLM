@@ -1,6 +1,6 @@
 # Public dataset plan
 
-Use free public datasets and their existing annotations for PixWeb and pixVLM Small. Keep separate training and evaluation pools for the two models. The first pilot does not require private image collection, paid labeling APIs or a custom data generator.
+Use free public datasets and their existing annotations for PixWeb and PixVLM Small. Keep separate training and evaluation pools for the two models. The first pilot does not require private image collection, paid labeling APIs or a custom data generator.
 
 ## Initial shortlist
 
@@ -10,10 +10,10 @@ These are candidate sources to sample and check, not datasets already used for t
 |---|---|---|---|
 | PixWeb: page layout and visible text | [WebSight](https://huggingface.co/datasets/HuggingFaceM4/WebSight) | Website screenshots paired with HTML/CSS; derive only targets visible in the screenshot | CC BY 4.0, source-content terms and disclosure of dataset use |
 | PixWeb: UI elements and text | [ScreenParse](https://huggingface.co/datasets/docling-project/screenparse) | Element labels, boxes, visible text, interactability and reading order | CC BY 4.0; retain source-page provenance |
-| pixVLM Small: scene OCR | [TextOCR](https://textvqa.org/textocr/dataset/) | Word transcriptions and text regions in natural images | CC BY 4.0 annotations; verify underlying Open Images licenses |
-| pixVLM Small: receipt extraction | [CORD v2](https://huggingface.co/datasets/naver-clova-ix/cord-v2) | Indonesian receipt images, OCR annotations and structured item/amount fields | CC BY 4.0 |
-| pixVLM Small: captions and objects | [COCO](https://cocodataset.org/) | Existing captions, object categories and instance annotations | CC BY 4.0 annotations; image-specific licenses |
-| pixVLM Small: object recognition | [Open Images](https://storage.googleapis.com/openimages/web/index.html) | Image labels, object boxes and relationships | CC BY 4.0 annotations; verify image-specific CC BY 2.0 records |
+| PixVLM Small: scene OCR | [TextOCR](https://textvqa.org/textocr/dataset/) | Word transcriptions and text regions in natural images | CC BY 4.0 annotations; verify underlying Open Images licenses |
+| PixVLM Small: receipt extraction | [CORD v2](https://huggingface.co/datasets/naver-clova-ix/cord-v2) | Indonesian receipt images, OCR annotations and structured item/amount fields | CC BY 4.0 |
+| PixVLM Small: captions and objects | [COCO](https://cocodataset.org/) | Existing captions, object categories and instance annotations | CC BY 4.0 annotations; image-specific licenses |
+| PixVLM Small: object recognition | [Open Images](https://storage.googleapis.com/openimages/web/index.html) | Image labels, object boxes and relationships | CC BY 4.0 annotations; verify image-specific CC BY 2.0 records |
 
 WebSight contains publicly released synthetic pages; using those records does not require building a new generator. Screenshot/HTML pairs and UI-element labels need conversion into PixWeb observation tasks. They do not provide complete browser-action trajectories.
 
@@ -50,7 +50,7 @@ Keep downloaded data outside Git. Commit small manifests, preparation code and p
 
 **PixWeb:** compare UI text, labels and element claims with the screenshot. HTML may include hidden or off-screen content; do not treat all source text as visible. Keep observation labels separate from planner decisions and action sequences.
 
-**pixVLM Small:** check OCR against the published transcription, exclude illegible/placeholder targets, and map extraction fields only from real source annotations. Use grounded object questions and captions; missing annotations are not proof of absence or an exact count.
+**PixVLM Small:** check OCR against the published transcription, exclude illegible/placeholder targets, and map extraction fields only from real source annotations. Use grounded object questions and captions; missing annotations are not proof of absence or an exact count.
 
 Reject corrupted images, mismatched targets, duplicate records and invalid extraction JSON. Review a sample visually before a training run.
 

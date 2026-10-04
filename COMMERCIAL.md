@@ -1,8 +1,8 @@
 # Commercial enquiries
 
-PixLab is developing **PixWeb** for web tasks and browser automation and **pixVLM Small** for general-purpose vision.
+PixLab is developing **PixWeb** for web tasks and browser automation and **PixVLM Small** for general-purpose vision.
 
-Contact [licensing@pixlab.io](mailto:licensing@pixlab.io) for:
+Contact [support@pixlab.io](mailto:support@pixlab.io) for:
 
 - Browser, edge and embedded integration
 - OEM distribution and deployment support

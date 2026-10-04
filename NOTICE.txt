@@ -1,4 +1,4 @@
-PixWeb and pixVLM Small — attribution status
+PixWeb and PixVLM Small — attribution status
 
 This repository currently contains PixLab project documentation. It does
 not include upstream model weights, adapters, exported graphs or vendor code.

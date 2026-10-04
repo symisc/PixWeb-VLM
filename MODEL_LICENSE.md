@@ -2,7 +2,7 @@
 
 **This document is a status note, not a model license or a grant of rights.**
 
-No PixWeb or pixVLM Small weights, adapters or exported model artifacts are currently distributed in this repository.
+No PixWeb or PixVLM Small weights, adapters or exported model artifacts are currently distributed in this repository.
 
 ## Source code and model artifacts
 
